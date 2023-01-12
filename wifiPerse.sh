@@ -40,7 +40,7 @@ trap ctrl_c SIGINT # or INT
 function ctrl_c (){
 	echoColor "red" "\n[*] Saliendo..."
   airmon-ng stop ${networkCard}mon > /dev/null 2>&1
-  tput cnorm; 
+  tput cnorm;service networking restart 
   rm captura* 2>/dev/null 
   exit 0
 }
@@ -191,7 +191,7 @@ if [[ "$(id -u)" == "0" ]]; then #requiere acciones administrativas
 	else
     dependencies
 		startAttack
-    tput cnorm; airmon-ng stop ${networkCard}mon > /dev/null 2>&1; 
+    tput cnorm; airmon-ng stop ${networkCard}mon > /dev/null 2>&1;service networking restart 
 	fi
 
 else
