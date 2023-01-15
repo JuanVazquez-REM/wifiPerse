@@ -9,11 +9,18 @@ Para esto se hace uso de un ataque DeAuth global, por lo tanto es algo agresivo.
 2. **PKMID**:
 Este ataque no requiere de usuarios autenticados a la red, ya que se comunica directo con el router y después de una serie de procedimientos obtener el hash de dicha red. Claro que si el router es vulnerable, obtendremos el hash.
 
-
-
 ## Uso
 Tras ejecutar la herramienta *como un usuario privilegiado*, se muestra un panel de ayuda, en el cual se encuentran los 2 modos de ataque.
 
+``` bash
+
+[*] Uso: ./perseWifi.sh
+
+	a) Modos de ataque
+		HandShake
+		PKMID
+	n) Nombre de la tarjeta de red
+```
 
 Una vez seleccionado el modo de ataque, la herramienta realizara una comprobación para las herramientas a utilizar, de ser necesario las descarga e instalara.
 
